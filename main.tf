@@ -244,7 +244,7 @@ resource "aws_cloudwatch_metric_alarm" "service_queue_high" {
 
       #      unit        = "Count"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -260,7 +260,7 @@ resource "aws_cloudwatch_metric_alarm" "service_queue_high" {
 
       #  unit        = "Count"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -301,7 +301,7 @@ resource "aws_cloudwatch_metric_alarm" "service_queue_big_high" {
 
       #      unit        = "Count"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -317,7 +317,7 @@ resource "aws_cloudwatch_metric_alarm" "service_queue_big_high" {
 
       #  unit        = "Count"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -355,7 +355,7 @@ resource "aws_cloudwatch_metric_alarm" "service_queue_low" {
 
       #  unit        = "Count"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -372,7 +372,7 @@ resource "aws_cloudwatch_metric_alarm" "service_queue_low" {
 
       #  unit        = "Count"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -408,7 +408,7 @@ resource "aws_cloudwatch_metric_alarm" "queue_up" {
       period      = "60"
       stat        = "Maximum"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -423,7 +423,7 @@ resource "aws_cloudwatch_metric_alarm" "queue_up" {
       period      = "60"
       stat        = "Maximum"
 
-      dimensions {
+      dimensions = {
         QueueName = "${var.queue_name}"
       }
     }
@@ -438,7 +438,7 @@ resource "aws_cloudwatch_metric_alarm" "queue_up" {
       period      = "60"
       stat        = "Maximum"
 
-      dimensions {
+      dimensions = {
         ClusterName = var.cluster_name
         ServiceName = var.service_name
       }
@@ -475,7 +475,7 @@ resource "aws_cloudwatch_metric_alarm" "queue_down" {
       period      = "60"
       stat        = "Maximum"
 
-      dimensions {
+      dimensions = {
         QueueName = var.queue_name
       }
     }
@@ -490,7 +490,7 @@ resource "aws_cloudwatch_metric_alarm" "queue_down" {
       period      = "60"
       stat        = "Maximum"
 
-      dimensions {
+      dimensions = {
         QueueName = "${var.queue_name}"
       }
     }
@@ -505,7 +505,7 @@ resource "aws_cloudwatch_metric_alarm" "queue_down" {
       period      = "60"
       stat        = "Maximum"
 
-      dimensions {
+      dimensions = {
         ClusterName = var.cluster_name
         ServiceName = var.service_name
       }
